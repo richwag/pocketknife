@@ -1,0 +1,229 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "winres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (United States) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""winres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "1 TYPELIB ""PocketKnife.tlb""\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,1,0,1
+ PRODUCTVERSION 1,1,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x2L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+            VALUE "CompanyName", "Richard Wagenknecht"
+            VALUE "FileDescription", "Context menu handler utility for programmers."
+            VALUE "FileVersion", "1.1.0.1"
+            VALUE "InternalName", "PocketKnife.dll"
+            VALUE "LegalCopyright", "© 2003, 2013 Intellisys Inc.  All rights reserved."
+            VALUE "OriginalFilename", "PocketKnife.dll"
+            VALUE "ProductName", "PocketKnife"
+            VALUE "ProductVersion", "1.1.0.1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// REGISTRY
+//
+
+IDR_POCKETKNIFE         REGISTRY                "PocketKnife.rgs"
+IDR_CONTEXTMENUHANDLER  REGISTRY                "ContextMenuHandler.rgs"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_CONFIGURATIONDLG DIALOGEX 0, 0, 228, 126
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_ACCEPTFILES
+CAPTION "Paths"
+FONT 8, "MS Sans Serif", 0, 0, 0x0
+BEGIN
+    CONTROL         "",IDC_PATHS_LIST,"SysListView32",LVS_REPORT | LVS_SINGLESEL | LVS_SHOWSELALWAYS | LVS_ALIGNLEFT | LVS_NOSORTHEADER | WS_BORDER | WS_TABSTOP,7,7,214,93,WS_EX_ACCEPTFILES
+    PUSHBUTTON      "&Remove",IDC_REMOVE_BUTTON,7,105,50,14,WS_DISABLED
+    PUSHBUTTON      "&Add...",IDC_ADD_BUTTON,61,105,50,14
+    PUSHBUTTON      "Move &Up",IDC_MOVE_UP_BUTTON,115,105,50,14
+    PUSHBUTTON      "Move &Down",IDC_MOVE_DOWN_BUTTON,169,105,50,14
+END
+
+IDD_ABOUTDLG DIALOGEX 0, 0, 260, 138
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "PocketKnife 1.0\n\n© Copyright 2003, 2013, Richard Wagenknecht. All Rights Reserved.\n\n Written by: Richard Wagenknecht",IDC_PROGRAM_INFO_STATIC,7,7,246,48
+END
+
+IDD_OPTIONSDLG DIALOGEX 0, 0, 218, 126
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Options"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    CONTROL         "&Long Menu",IDC_LONG_MENU_RADIO,"Button",BS_AUTORADIOBUTTON | WS_GROUP | WS_TABSTOP,7,7,51,10
+    CONTROL         "&Short Menu",IDC_SHORT_MENU_RADIO,"Button",BS_AUTORADIOBUTTON,7,22,53,10
+    GROUPBOX        "Short Menu Options",IDC_STATIC,7,38,204,53
+    LTEXT           "&Move Key:",IDC_MOVE_KEY_LABEL,15,52,35,8
+    LTEXT           "&Explore Key:",IDC_EXPLORE_KEY_LABEL,15,68,42,8
+    COMBOBOX        IDC_MOVE_KEY_COMBO,66,51,91,54,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_EXPLORE_KEY_COMBO,66,67,91,54,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+END
+
+IDD_ADD_ENV_VAR_DIALOG DIALOGEX 0, 0, 236, 174
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Add Path to Environment Variable"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "Set:",IDC_STATIC,7,10,14,8
+    CONTROL         "&System",IDC_SYSTEM_RADIO,"Button",BS_AUTORADIOBUTTON | BS_NOTIFY,42,9,39,10
+    CONTROL         "&User",IDC_USER_RADIO,"Button",BS_AUTORADIOBUTTON | BS_NOTIFY,102,9,31,10
+    LTEXT           "&Variable:",IDC_STATIC,7,26,29,8
+    COMBOBOX        IDC_VARIABLES_COMBO,41,25,188,98,CBS_DROPDOWNLIST | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    CONTROL         "",IDC_PATHS_LIST,"SysListView32",LVS_REPORT | LVS_SINGLESEL | LVS_SHOWSELALWAYS | LVS_EDITLABELS | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,42,47,187,73
+    PUSHBUTTON      "&Remove",IDC_REMOVE_BUTTON,69,122,50,14,WS_DISABLED
+    PUSHBUTTON      "Move &Up",IDC_MOVE_UP_BUTTON,124,122,50,14
+    PUSHBUTTON      "Move &Down",IDC_MOVE_DOWN_BUTTON,179,122,50,14
+    DEFPUSHBUTTON   "OK",IDOK,124,153,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,179,153,50,14
+    CONTROL         "",IDC_STATIC,"Static",SS_ETCHEDHORZ,7,144,222,1
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_CONFIGURATIONDLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 221
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 119
+    END
+
+    IDD_ABOUTDLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 253
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 131
+    END
+
+    IDD_OPTIONSDLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 211
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 119
+    END
+
+    IDD_ADD_ENV_VAR_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 229
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 167
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_INTELLISYS          BITMAP                  "Intellisys90Logo.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+    IDS_PROJNAME            "PocketKnife"
+END
+
+#endif    // English (United States) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+1 TYPELIB "PocketKnife.tlb"
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

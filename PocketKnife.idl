@@ -1,0 +1,36 @@
+// PocketKnife.idl : IDL source for PocketKnife
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (PocketKnife.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+
+[
+	object,
+	uuid(036AE9CC-3E6C-4A0E-8EA5-38DE07F49BA1),
+	dual,
+	nonextensible,
+	helpstring("IContextMenuHandler Interface"),
+	pointer_default(unique)
+]
+interface IContextMenuHandler : IDispatch{
+};
+[
+	uuid(BBEA12CF-AAEA-4C96-9193-98DCE0A9AC16),
+	version(1.0),
+	helpstring("PocketKnife 1.0 Type Library")
+]
+library PocketKnifeLib
+{
+	importlib("stdole2.tlb");
+	[
+		uuid(EE6FD1E8-871A-4CC7-90E1-3261B7FCB8EE),
+		helpstring("ContextMenuHandler Class")
+	]
+	coclass ContextMenuHandler
+	{
+		[default] interface IContextMenuHandler;
+	};
+};

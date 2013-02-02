@@ -1,0 +1,9 @@
+; PocketKnife.def : Declares the module parameters.
+
+LIBRARY      "PocketKnife.DLL"
+
+EXPORTS
+	DllCanUnloadNow		PRIVATE
+	DllGetClassObject	PRIVATE
+	DllRegisterServer	PRIVATE
+	DllUnregisterServer	PRIVATE
